@@ -1,0 +1,17 @@
+--cpu Cortex-M3
+".\objects\pinmux.o"
+".\objects\adc_channel_read.o"
+".\objects\retarget_io.o"
+".\objects\common.o"
+".\objects\adi_adc.o"
+".\objects\adi_dma.o"
+".\objects\adi_pwr.o"
+".\objects\adi_uart.o"
+".\objects\adi_wdt.o"
+".\objects\retarget_uart.o"
+".\objects\startup_aducm3029.o"
+".\objects\system_aducm3029.o"
+--strict --scatter ".\Objects\adc_channel_read.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\adc_channel_read.map" -o .\Objects\adc_channel_read.axf
